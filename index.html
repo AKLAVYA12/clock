@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xdazi Clock</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      font-family: 'Courier New', monospace;
+    }
+
+    .clock-container {
+      color: #222;
+      border: 2px solid #6a0dad;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 2rem 3rem;
+      font-size: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 10px #6a0dad33;
+      }
+      to {
+        box-shadow: 0 0 20px #6a0dad88;
+      }
+    }
+
+    h3 {
+      color: #6a0dad;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+
+    #display {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #111;
+    }
+
+    #display2 {
+      font-size: 1.2rem;
+      color: #444;
+    }
+
+    .background-decoration {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  opacity: 0.5;
+  pointer-events: none;
+  animation: float 8s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+  </style>
+</head>
+<body>
+  <div class="clock-container" id="clock">
+    <h3>Xdazi Clock</h3>
+    <p id="display">00:00:00:00</p>
+    <p id="display2">00/00/0000</p>
+  </div>
+<img src="images/f1 (1).png" class="background-decoration" style="top: 10%; left: 15%;" />
+<img src="images/f1 (2).png" class="background-decoration" style="top: 30%; left: 80%;" />
+<img src="images/f1 (3).png" class="background-decoration" style="top: 60%; left: 40%;" />
+<img src="images/f1 (4).png" class="background-decoration" style="top: 75%; left: 10%;" />
+<img src="images/f1 (5).png" class="background-decoration" style="top: 20%; left: 60%;" />
+<img src="images/f1 (6).png" class="background-decoration" style="top: 50%; left: 70%;" />
+
+
+  <script src="clock.js"></script>
+</body>
+</html>
